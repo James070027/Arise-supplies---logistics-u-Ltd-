@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0C0C0C">
+<title>ARISE SUPPLIES AND LOGISTICS (U) LTD</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<div class="logo" id="logoTap"><img src="logo.png" alt="Arise Logo"><span>ARISE SUPPLIES<br>AND LOGISTICS (U) LTD</span></div>
+<div class="right"><div class="my-order" onclick="toggleOrder()">MY ORDER <span id="orderCount">0</span></div><div class="hamburger" onclick="toggleDrawer()">⋮</div></div>
+</nav>
+<div class="overlay" id="drawerOverlay" onclick="toggleDrawer(false)"></div>
+<div class="drawer" id="drawer">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><b style="color:#fff;font-size:17px">Menu</b><div class="hamburger" onclick="toggleDrawer(false)">✕</div></div>
+<a href="#" data-page="home" class="active">Home <span>→</span></a>
+<a href="#" data-page="products">Products & Prices <span>→</span></a>
+<a href="#" data-page="about">About Us <span>→</span></a>
+<a href="#" data-page="bulk">For Businesses <span>→</span></a>
+<a href="#" data-page="recipes">All Recipes <span>→</span></a>
+<a href="#" data-page="reviews">Customer Reviews <span>→</span></a>
+<a href="#" data-page="delivery">Delivery Areas & Fees <span>→</span></a>
+<a href="#" data-page="payment">Payment Methods <span>→</span></a>
+<a href="#" data-page="faq">FAQ <span>→</span></a>
+<a href="#" data-page="contact">Find Us & Contact <span>→</span></a>
+<a href="#" id="drawerOrder">My Order List <span id="drawerCount">0</span></a>
+<div style="margin-top:20px;padding:16px;background:linear-gradient(135deg,#FFB800,#FF8A00);border-radius:14px;color:#111"><b style="font-size:12px">🏆 LOYALTY REWARD</b><br><span style="font-size:11px;font-weight:700">20 orders totaling at least 500k = 1KG FREE</span></div>
+</div>
+
+<div class="page active" id="page-home">
+<div class="hero">
+<div>
+<div><span class="badge">✅ UNBS CERTIFIED</span><span class="badge">☪️ HALAL BUREAU</span><span class="badge">❄️ COLD-CHAIN</span></div>
+<div class="loyalty-badge">🏆 LOYALTY: 20 ORDERS (MIN 500K TOTAL) = 1KG FREE</div>
+<h1 id="greetingH1"></h1>
+<p id="greetingP" style="opacity:.7;margin:18px 0 28px;max-width:580px;font-size:15px"></p>
+<button class="btn btn-red" onclick="makeOrderAction()">Make Order Now →</button>
+<button class="btn btn-white" onclick="showPage('contact')">Find Us</button>
+</div>
+<div><div class="coming gold" style="height:260px">COMING SOON</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px"><div class="coming red">COMING SOON</div><div class="coming green">COMING SOON</div></div></div>
+</div>
+<div class="section"><div class="head"><h2>Why Kitchens Choose Us Every Day</h2></div>
+<div class="grid">
+<div class="card"><h3>Certified & Halal</h3><p>UNBS and Halal Bureau certified. Certificates are on the wall, not hidden.</p></div>
+<div class="card"><h3>Cold From Us to You</h3><p>Freezer trucks, food-grade bags, ice packs. Zero to four degrees all the way.</p></div>
+<div class="card"><h3>What You See Is What You Pay</h3><p>We weigh on a digital scale in front of you. One kilogram means one kilogram.</p></div>
+<div class="card"><h3>We Keep Time</h3><p>Six AM means six AM. Hotels need meat before breakfast.</p></div>
+<div class="card"><h3>We Cut It Your Way</h3><p>Hundred gram portions, curry cut, steak cut. Tell us once, we remember.</p></div>
+<div class="card"><h3>Forgot to Order? We Still Come</h3><p>Inside Kampala we can reach you in three hours.</p></div>
+<div class="card"><h3>Central in Wandegeya</h3><p>Opposite The Junction, next to the mosque. Easy to find, easy to pick up.</p></div>
+<div class="card"><h3>Loyalty That Pays</h3><p>Twenty orders totaling at least 500k = 1KG free Apollo. Real meat, not points.</p></div>
+<div class="card"><h3>Talk to Someone Who Knows Meat</h3><p>Call <span class="wa-display">0766791805</span>.</p></div>
+<div class="card dark"><h3>We Grow With You</h3><p>Some clients started with 5KG in 2019. Today they order 100KG weekly.</p></div>
+</div></div></div>
+
+<div class="page" id="page-products"><div class="section"><div class="head"><h2>What We Have Today</h2></div><div class="product-grid" id="productGrid"></div></div></div>
+
+<div class="page" id="page-about"><div class="section"><div class="head"><h2>About Us - Wandegeya Opposite The Junction</h2></div><div class="grid">
+<div class="card" style="grid-column:1/-1">
+<h3>One Freezer, One Promise</h3>
+<p>In 2019 we started with one deep freezer at Wandegeya, next to the mosque. Chefs kept telling us the same things: late deliveries, dishonest weight, old meat sold as fresh. We made three promises and kept them: fresh meat daily, honest weight, six AM delivery. We woke at 4AM to cut, pack and deliver, sometimes by boda when the van broke down. One customer told another. Today we serve over 500 hotels, restaurants, schools, supermarkets, butcheries and homes across Kampala, Wakiso, Entebbe and Mukono, with freezer trucks, food-grade bags and calibrated scales.</p>
+<h3 style="margin-top:24px">Mission, Vision, Values</h3>
+<p><b>Mission:</b> Fresh, halal, affordable, accurately weighed meat delivered on time, every time.<br><b>Vision:</b> East Africa's most trusted meat supply chain, farm to plate.<br><b>Values:</b> Freshness, honesty (1KG means 1KG), halal integrity, punctuality, customer first, loyalty.</p>
+<h3 style="margin-top:24px">Where to Find Us</h3>
+<p>Wandegeya, Opposite The Junction Mall, next to Wandegeya Mosque, near Makerere Main Gate, 100m from Wandegeya Market. Look for the red and gold sign. Open 6AM to 9PM daily including Sundays and public holidays. Call <span class="wa-display">0766791805</span> before coming.</p>
+<div class="coming gold" style="height:140px;margin-top:20px">COMING SOON - Shop, Team & Trucks Photo/Video</div>
+</div>
+<div class="card dark"><h3>We Are Certified</h3><ul style="list-style:none;line-height:2.4"><li>✅ UNBS Certified</li><li>☪️ Halal Bureau Certified</li><li>❄️ HACCP Cold Chain</li><li>🏥 KCCA Inspected</li><li>⚖️ Scales Calibrated Weekly</li><li>📦 Food Grade Packaging</li><li>⏰ 6AM to 9PM Daily</li></ul></div>
+</div></div></div>
+
+<div class="page" id="page-bulk"><div class="section"><div class="head"><h2>Hotel, Restaurant or Shop? This Is For You</h2></div><div class="grid">
+<div class="card dark" style="background:linear-gradient(135deg,#C41E1E,#7A1111)"><h3 style="color:#fff">🏨 Hotels, Lodges & Guest Houses</h3><p style="color:#fff;opacity:.92">Daily 6AM delivery before breakfast. Custom cutting (100g steaks, 200g fillet). Monthly invoicing after 3 months. A dedicated person who knows your head chef. Emergency supply inside Kampala in 3 hours for 10k extra.</p><br><button class="btn btn-gold" onclick="makeOrderAction()">Make Order Now →</button></div>
+<div class="card dark"><h3>🍽️ Restaurants, Cafes & Takeaways</h3><p style="color:#fff">Portion-ready packs so stew, katogo and muchomo taste the same daily. Weekend emergency supply in 3 hours. Apollo minced is the Rolex best seller. Free delivery above 20KG inside Kampala.</p><br><button class="btn btn-gold" onclick="makeOrderAction()">Make Order Now →</button></div>
+<div class="card dark" style="background:linear-gradient(135deg,#0F7A3D,#064d2a)"><h3 style="color:#fff">🛒 Butcheries, Supermarkets & Resellers</h3><p style="color:#fff;opacity:.92">Apollo branded packs that sell fast. Storage advice. Pickup from Wandegeya or freezer-truck delivery. Wholesale prices for 50KG+ and 100KG+. Posters and price lists for your shop.</p><br><button class="btn btn-gold" onclick="makeOrderAction()">Make Order Now →</button></div>
+</div>
+<div class="grid" style="margin-top:22px">
+<div class="card"><h3>How Ordering Works</h3><p>1. Add products to My Order.<br>2. Fill your name, phone, location, delivery time.<br>3. Tap Confirm: WhatsApp opens with your order and we confirm price and delivery fee.<br>4. Rider arrives with a freezer box; you check weight and freshness and pay.<br>5. Loyalty is tracked by phone number once we confirm each order.</p></div>
+<div class="card"><h3>Packages</h3><p><b>Starter, 20-50KG weekly:</b> retail price, free delivery above 20KG inside Kampala, custom cutting.<br><b>Growth, 50-100KG weekly:</b> 5% discount, 2-hour priority emergency, dedicated rider, monthly statement.<br><b>Enterprise, 100KG+ weekly:</b> 10% discount, monthly invoicing, dedicated rider, double loyalty (20 orders = 2KG free).</p></div>
+</div></div></div>
+
+<div class="page" id="page-recipes"><div class="section"><div class="head"><h2>How to Cook What We Sell</h2><p>Tested recipes from our customers.</p></div><div id="recipeList"></div></div></div>
+
+<div class="page" id="page-reviews"><div class="section"><div class="head"><h2>What Customers Say</h2></div>
+<div class="grid" id="revStats" style="margin-bottom:28px"></div>
+<div class="grid" id="reviewsGrid"></div>
+<div class="card" style="margin-top:22px"><h3>How Loyalty Works</h3><p>Every confirmed order counts as one, whether 10k or 100k. We track by your phone number. When you reach 20 orders we add up the total: 500k or more earns 1KG Apollo free; if less, a few more orders until you cross 500k. Example: 25k x 20 = 500k = free 1KG.</p><button class="btn btn-red" style="margin-top:14px" onclick="directOrder('Hello, I want to leave a review')">Leave Review on WhatsApp</button></div>
+</div></div>
+
+<div class="page" id="page-delivery"><div class="section"><div class="head"><h2>Where We Deliver & How Much</h2></div><div class="grid">
+<div class="card"><h3>Inside Kampala</h3><table class="table" id="deliveryInsideTable"></table></div>
+<div class="card"><h3>Outside Kampala - Freezer Truck</h3><p style="background:#FFF3CD;padding:10px;border-radius:10px;opacity:1"><b>Minimum: 25KG or 250,000 UGX</b></p><table class="table" id="deliveryOutsideTable"></table></div>
+</div></div></div>
+
+<div class="page" id="page-payment"><div class="section"><div class="head"><h2>How to Pay</h2></div><div class="grid">
+<div class="card" style="border-left:4px solid #0F7A3D"><h3>Cash on Delivery - Up to 500k</h3><p>Orders of 500k or less can be paid in cash. The rider shows the weight on the scale, you pay, you get a receipt. Please prepare small change.</p></div>
+<div class="card" style="border-left:4px solid #FFB800"><h3>MTN Mobile Money - Above 500k</h3><p>Orders above 500k must be paid digitally. Dial <b>*165*3#</b>, choose Send Money to <b class="wa-display">0766791805</b> (ARISE SUPPLIES AND LOGISTICS (U) LTD), enter amount and PIN, then send the confirmation SMS screenshot on WhatsApp. We dispatch once confirmed.</p></div>
+<div class="card" style="border-left:4px solid #C41E1E"><h3>Airtel Money - Same Rule</h3><p>Above 500k must be digital. Dial <b>*185*3#</b>, send to <b class="wa-display">0766791805</b>, enter amount and PIN, then share the screenshot on WhatsApp.</p></div>
+<div class="card" style="border-left:4px solid #111"><h3>Visa & Bank - Hotels & Big Orders</h3><p>For orders above 1M and monthly invoicing, we send a secure card payment link and an official stamped receipt.</p></div>
+</div></div></div>
+
+<div class="page" id="page-faq"><div class="section"><div class="head"><h2>Questions People Ask Us</h2></div><div class="card" id="faqList">
+<div class="faq open"><b>Are you Halal certified? <span>−</span></b><p>Yes, 100% Halal Bureau certified. The certificate is displayed at our shop.</p></div>
+<div class="faq"><b>What time do you deliver? <span>+</span></b><p>From 6AM daily. Inside Kampala 1-3 hours, outside 3-6 hours. 3-hour emergency delivery inside Kampala for 10k extra.</p></div>
+<div class="faq"><b>How does the loyalty reward work? <span>+</span></b><p>You need both: 20 confirmed orders AND at least 500,000 UGX in total. Then you get 1KG Aroma Minced Apollo free and the count starts again.</p></div>
+<div class="faq"><b>Do you deliver outside Kampala? <span>+</span></b><p>Yes, minimum 25KG or 250k to cover the freezer truck. Fees from 25k to 120k.</p></div>
+<div class="faq"><b>What is the cash limit? <span>+</span></b><p>Cash on delivery up to 500k. Above that, use MTN Mobile Money, Airtel Money or Visa. Official number <span class="wa-display">0766791805</span>.</p></div>
+<div class="faq"><b>Is weighing accurate? <span>+</span></b><p>Yes. Calibrated digital scales, checked weekly, shown to you.</p></div>
+<div class="faq"><b>Can I pick up from Wandegeya? <span>+</span></b><p>Yes, 6AM to 9PM daily. Call <span class="wa-display">0766791805</span> first so we prepare your order.</p></div>
+<div class="faq"><b>Can I install this as an app? <span>+</span></b><p>Yes. In Chrome on Android tap the three dots, then "Install app" or "Add to Home screen".</p></div>
+<div class="faq"><b>Can I order offline? <span>+</span></b><p>You can browse after installing. Orders made offline are saved and you are asked to send them when internet returns.</p></div>
+</div></div></div>
+
+<div class="page" id="page-contact"><div class="section"><div class="head"><h2>Find Us - Wandegeya Opposite The Junction</h2></div><div class="grid">
+<div class="card"><h3>📍 Come Visit</h3><p><b>Wandegeya, Opposite The Junction, Kampala</b><br>Next to the mosque, red and gold ARISE SUPPLIES sign.<br><br><span style="font-size:26px;font-weight:800;color:#C41E1E" class="wa-display">0766791805</span><br><small>WhatsApp & Calls • 6AM-9PM, 7 days</small></p><br><button class="btn btn-red" onclick="directOrder('Hello Arise Supplies, I would like to visit your shop')">WhatsApp Us Now</button>
+<h4 style="margin-top:20px;font-size:13px">Follow Us</h4><div class="social socialLinks"></div></div>
+<div style="border-radius:20px;overflow:hidden;border:5px solid #fff;height:fit-content"><iframe title="Map" src="https://www.google.com/maps?q=Wandegeya+Opposite+Junction+Kampala&z=15&output=embed" width="100%" height="460" style="border:0" loading="lazy"></iframe></div>
+</div></div></div>
+
+<footer>
+<img src="logo.png" alt="Arise Logo" style="width:90px;background:#fff;border-radius:14px;padding:6px;margin-bottom:16px"><br>
+<div class="social socialLinks" style="justify-content:center"></div>
+© 2026 ARISE SUPPLIES AND LOGISTICS (U) LTD • Wandegeya Opposite The Junction, Kampala • UNBS & Halal Bureau Certified • <span style="text-decoration:underline;cursor:pointer" onclick="openAdmin()">Admin</span>
+</footer>
+
+<div class="panel-overlay" id="orderOverlay" onclick="toggleOrder(false)"></div>
+<div class="panel" id="orderPanel">
+<div style="padding:18px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center"><h3>My Order List</h3><div class="hamburger" style="background:#111" onclick="toggleOrder(false)">✕</div></div>
+<div id="orderItems" style="flex:1;overflow:auto;padding:12px"></div>
+<div style="padding:18px;border-top:1px solid #eee;background:#f9f8f6">
+<input class="input" id="cName" placeholder="Your Full Name *">
+<input class="input" id="cPhone" placeholder="Your Phone Number *" inputmode="tel">
+<input class="input" id="cLocation" placeholder="Location / District / Landmark *">
+<select class="input" id="cTime"><option>Today Morning (6AM-11AM)</option><option>Today Afternoon (12PM-5PM)</option><option>Tomorrow Morning</option><option>Emergency - 3 Hours (+10k)</option></select>
+<textarea class="input" id="cNotes" placeholder="Extra notes (optional)" style="height:58px"></textarea>
+<div style="margin:8px 0;font-size:12px"><b>Total Items: <span id="totalItems">0</span> • Est. <span id="estTotal">0</span> UGX</b><br><small style="opacity:.6">🏆 Loyalty: 20 orders (min 500k) = 1KG FREE</small></div>
+<button class="btn btn-red" style="width:100%;justify-content:center;padding:15px" onclick="checkout()">Confirm Order on WhatsApp →</button>
+<p id="offlineMsg" style="font-size:11px;color:#C41E1E;margin-top:8px;display:none">You are offline. Order saved. It will be sent when internet returns.</p>
+</div></div>
+
+<div id="toast" role="status"></div>
+<div id="makeOrderFAB" onclick="makeOrderAction()">→ Make Order</div>
+<div id="chatBtn" onclick="toggleChat()">💬</div>
+<div id="chatBox">
+<div class="chat-head"><b>Chat - Arise Supplies</b><div class="hamburger" style="width:32px;height:32px;font-size:16px" onclick="toggleChat()">✕</div></div>
+<div class="chat-msgs" id="chatMsgs"><div class="msg bot">Hello! This is Arise Supplies, Wandegeya. Type your message and we'll send it to our team on WhatsApp.</div></div>
+<div class="chat-input"><input id="chatInput" placeholder="Type your message..."><button class="btn btn-red" onclick="sendChat()">Send</button></div>
+</div>
+
+<div id="admin"><div class="admin-box">
+<div style="display:flex;justify-content:space-between;align-items:center"><h3>Admin Panel</h3><div class="hamburger" style="background:#111" onclick="closeAdmin()">✕</div></div>
+<div id="adminLogin"><input class="input" type="password" id="pass" placeholder="Enter Password" style="margin-top:12px"><button class="btn btn-red" onclick="login()" style="width:100%;justify-content:center">Login</button></div>
+<div id="adminContent" style="display:none">
+<div class="admin-tabs">
+<div class="admin-tab active" data-tab="loyalty">🏆 Loyalty</div><div class="admin-tab" data-tab="orders">📦 Orders</div><div class="admin-tab" data-tab="products">🥩 Products</div><div class="admin-tab" data-tab="fees">🚚 Fees</div><div class="admin-tab" data-tab="revs">⭐ Reviews</div><div class="admin-tab" data-tab="settings">⚙️ Settings</div><div class="admin-tab" data-tab="password">🔒 Password</div>
+</div>
+<div class="admin-section active" id="admin-loyalty"><h4>Loyalty Tracker (confirmed orders only)</h4><div class="list" id="loyaltyList"></div><button class="btn btn-small btn-white" style="margin-top:8px" onclick="clearData('arise_loyalty')">Clear Loyalty</button></div>
+<div class="admin-section" id="admin-orders"><h4>Add an order received on WhatsApp</h4><p style="font-size:11px;opacity:.6">Orders placed on customers' phones are not stored here. Add each confirmed WhatsApp order so loyalty counts.</p><input class="input" id="mName" placeholder="Customer name"><input class="input" id="mPhone" placeholder="Phone" inputmode="tel"><input class="input" id="mTotal" placeholder="Order total UGX" inputmode="numeric"><button class="btn btn-gold btn-small" onclick="addManualOrder()">+ Add confirmed order</button><h4 style="margin-top:14px">Order History</h4><div class="list" id="orderHistoryList"></div><button class="btn btn-small btn-white" style="margin-top:8px" onclick="clearData('arise_order_history')">Clear Orders</button></div>
+<div class="admin-section" id="admin-products"><h4>Products</h4><p style="font-size:11px;opacity:.6">Changes save automatically. Photo: upload e.g. beef.jpg beside index.html and type the file name. Blank = COMING SOON.</p><div id="productEditor" style="margin-top:10px"></div><button class="btn btn-gold btn-small" onclick="addRow('products')">+ Add Product</button></div>
+<div class="admin-section" id="admin-fees"><h4>Delivery Fees</h4><div id="insideEditor"></div><button class="btn btn-gold btn-small" onclick="addRow('inside')">+ Area Inside</button><div id="outsideEditor" style="margin-top:12px"></div><button class="btn btn-gold btn-small" onclick="addRow('outside')">+ Area Outside</button></div>
+<div class="admin-section" id="admin-revs"><h4>Reviews</h4><div id="reviewsEditor"></div><button class="btn btn-gold btn-small" onclick="addRow('reviews')">+ Add Review</button></div>
+<div class="admin-section" id="admin-settings"><h4>WhatsApp & Social Links</h4><input class="input" id="settingWA" placeholder="256766791805"><input class="input" id="settingX" placeholder="X URL"><input class="input" id="settingFB" placeholder="Facebook URL"><input class="input" id="settingIG" placeholder="Instagram URL"><input class="input" id="settingYT" placeholder="YouTube URL"><button class="btn btn-red btn-small" style="width:100%;justify-content:center" onclick="saveSettings()">Save Settings</button><div class="item" style="margin-top:12px"><b>Publish your changes to customers</b><p style="font-size:11px;opacity:.7">Edits are saved on this device only. Tap below to download live.js, upload it beside index.html on your host, and every customer sees the new prices.</p><button class="btn btn-gold btn-small" onclick="exportLive()">Download live.js</button></div><h5 style="margin-top:12px">Chat messages</h5><div class="list" id="adminChats"></div></div>
+<div class="admin-section" id="admin-password"><h4>Change Password</h4><input class="input" type="password" id="newPass" placeholder="New Password"><input class="input" type="password" id="confirmPass" placeholder="Confirm New Password"><button class="btn btn-gold" onclick="changePassword()" style="width:100%;justify-content:center">Change Password</button></div>
+</div></div></div>
+
+<script src="data.js"></script>
+<script src="live.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
